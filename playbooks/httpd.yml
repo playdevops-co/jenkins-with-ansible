@@ -1,0 +1,15 @@
+---
+- name: installing apache httpd using copy module
+  hosts: apphosts
+  become: true
+  tasks:
+  - name: installing apache httpd using yum module
+    yum:
+     name: httpd
+     state: latest
+  - name: starting the httpd serivice
+    service:
+     name: httpd
+     state: started
+     enabled: true
+...
