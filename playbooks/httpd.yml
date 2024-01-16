@@ -1,6 +1,6 @@
 ---
 - name: installing apache httpd using copy module
-  hosts: apphosts
+  hosts: web
   become: true
   tasks:
   - name: installing apache httpd using yum module
